@@ -1,0 +1,47 @@
+{
+    "Stacks": [
+        {
+            "StackId": "arn:aws:cloudformation:us-east-2:214138627090:stack/apigateway15/ce6cb770-2985-11e7-b775-50a68a05d0fd", 
+            "Description": "Lambda and API Gateway", 
+            "Parameters": [
+                {
+                    "ParameterValue": "fidelityautomation", 
+                    "ParameterKey": "S3Bucket"
+                }, 
+                {
+                    "ParameterValue": "lambda.zip", 
+                    "ParameterKey": "S3Key"
+                }
+            ], 
+            "Tags": [], 
+            "Outputs": [
+
+                 {
+                    "Description": "Lambda Function Arn",
+                    "OutputKey": "HelloWorldPython",
+                    "OutputValue": "arn:aws:lambda:us-west-2:214138627090:function:hello-world-python"
+
+                }  ,
+                {
+                    "Description": "Lambda Function Arn",
+                    "OutputKey": "HelloWorldPython2",
+                    "OutputValue": "arn:aws:lambda:us-west-2:214138627090:function:hello-lambda-2"
+
+                }  ,
+                {
+                    "Description": "Simple EMR",
+                    "OutputKey": "SimpleEMR",
+                    "OutputValue": "j-18DSEZVFAQ501"
+                }
+            ], 
+            "CreationTime": "2017-04-25T07:07:12.903Z", 
+            "Capabilities": [
+                "CAPABILITY_IAM"
+            ], 
+            "StackName": "apigateway15", 
+            "NotificationARNs": [], 
+            "StackStatus": "CREATE_COMPLETE", 
+            "DisableRollback": false
+        }
+    ]
+}
