@@ -7,7 +7,7 @@ if __name__ == '__main__':
     if len(sys.argv) < 2: raise Exception(
         "ERROR: Insufficient number of arguments, changes.txt, config.json and output.json file paths must be given")
     crobj = ChangedResources(sys.argv[1], sys.argv[2], sys.argv[3])
-
+    print "Changed Resources", crobj.changedResources
     changedLambdas = crobj.getChangedLambdas()
     print "Lambdas: " , changedLambdas
     changedEMRs = crobj.getChangedEMRs()

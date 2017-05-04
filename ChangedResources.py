@@ -5,10 +5,10 @@ from ConfigrationReader import ConfigrationReader
 class ChangedResources(object):
     def __init__(self, gitChangesFile, config, couldfomrationOutputs):
         self.configReaderObj = ConfigrationReader(gitChangesFile, config, couldfomrationOutputs)
-        self.changedResources = self.identifyChangedResources(self.configReaderObj.gitFile)
+        self.changedResources = self.identifyChangedResources()
 
-    def identifyChangedResources(self, gitChangesFile):
-        with open(gitChangesFile, "r") as ins:
+    def identifyChangedResources(self):
+        with open(self.configReaderObj.gitFile, "r") as ins:
             service_list = []
             for line in ins:
                 for each in self.configReaderObj.configuration['lambda']:
@@ -64,11 +64,10 @@ class ChangedResources(object):
                         array.append(arr)
         return array
 
-
+# Unit Test Purpose
 if __name__ == '__main__':
     if len(sys.argv) < 2: raise Exception(
         "ERROR: Insufficient number of arguments, changes.txt, config.json and output.json file paths must be given")
-
     crobj = ChangedResources(sys.argv[1], sys.argv[2], sys.argv[3])
 
     # print "Lambdas: " , crobj.getChangedLambdas()
