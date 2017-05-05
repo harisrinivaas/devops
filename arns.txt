@@ -1,1 +1,0 @@
-[{'arn': u'arn:aws:lambda:us-east-2:214138627090:EMR_clusterID', 'service-name': u'SampleEMR'}, {'arn': u'arn:aws:lambda:us-east-2:214138627090:salesARN', 'service-name': u'Sales'}, {'arn': u'arn:aws:lambda:us-east-2:UserSampleARN', 'service-name': u'UserSample'}]
